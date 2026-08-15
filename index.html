@@ -18,6 +18,7 @@
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#tentang">Tentang</a></li>
                 <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#harga-aqiqah">Harga Aqiqah</a></li>
                 <li><a href="#galeri">Galeri</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
@@ -99,6 +100,150 @@
                         <li>Transparansi penuh</li>
                         <li>Distribusi tepat</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Harga Aqiqah Section -->
+    <section id="harga-aqiqah" class="harga-aqiqah">
+        <div class="container">
+            <h2>Daftar Harga Paket Aqiqah</h2>
+            <p class="subtitle">Kami berikan penawaran paket aqiqah terbaik pilihan yang disesuaikan dengan kebutuhan Anda</p>
+            
+            <div class="harga-grid">
+                <!-- Paket Hemat -->
+                <div class="harga-card">
+                    <div class="harga-header">
+                        <h3>Aqiqah 1 ekor</h3>
+                        <p class="paket-nama">Hemat</p>
+                    </div>
+                    <div class="harga-body">
+                        <div class="harga-price">Rp 1.700.000</div>
+                        <ul class="harga-list">
+                            <li><i class="fas fa-check"></i> 160 Porsi sate</li>
+                            <li><i class="fas fa-check"></i> 60 Bungkus puler</li>
+                            <li><i class="fas fa-check"></i> Daging berkualitas</li>
+                            <li><i class="fas fa-check"></i> Pengiriman gratis</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary btn-pesan" data-paket="hemat" data-harga="1700000">Pesan Sekarang</button>
+                </div>
+
+                <!-- Paket Standar -->
+                <div class="harga-card featured">
+                    <div class="featured-badge">POPULER</div>
+                    <div class="harga-header">
+                        <h3>Aqiqah 1 ekor</h3>
+                        <p class="paket-nama">Standar</p>
+                    </div>
+                    <div class="harga-body">
+                        <div class="harga-price">Rp 1.900.000</div>
+                        <ul class="harga-list">
+                            <li><i class="fas fa-check"></i> 240 Porsi sate</li>
+                            <li><i class="fas fa-check"></i> 60 Bungkus puler</li>
+                            <li><i class="fas fa-check"></i> Menu pilihan</li>
+                            <li><i class="fas fa-check"></i> Pengiriman gratis</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary btn-pesan" data-paket="standar" data-harga="1900000">Pesan Sekarang</button>
+                </div>
+
+                <!-- Paket Super -->
+                <div class="harga-card">
+                    <div class="harga-header">
+                        <h3>Aqiqah 1 ekor</h3>
+                        <p class="paket-nama">Super</p>
+                    </div>
+                    <div class="harga-body">
+                        <div class="harga-price">Rp 2.200.000</div>
+                        <ul class="harga-list">
+                            <li><i class="fas fa-check"></i> 320 Porsi sate</li>
+                            <li><i class="fas fa-check"></i> 80 Bungkus puler</li>
+                            <li><i class="fas fa-check"></i> Menu premium</li>
+                            <li><i class="fas fa-check"></i> Pengiriman gratis</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary btn-pesan" data-paket="super" data-harga="2200000">Pesan Sekarang</button>
+                </div>
+
+                <!-- Paket Istimewa -->
+                <div class="harga-card">
+                    <div class="harga-header">
+                        <h3>Aqiqah 1 ekor</h3>
+                        <p class="paket-nama">Istimewa</p>
+                    </div>
+                    <div class="harga-body">
+                        <div class="harga-price">Rp 2.500.000</div>
+                        <ul class="harga-list">
+                            <li><i class="fas fa-check"></i> 480 Porsi sate</li>
+                            <li><i class="fas fa-check"></i> 100 Bungkus puler</li>
+                            <li><i class="fas fa-check"></i> Menu eksklusif</li>
+                            <li><i class="fas fa-check"></i> Pengiriman gratis</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary btn-pesan" data-paket="istimewa" data-harga="2500000">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Kalkulator Estimasi -->
+            <div class="kalkulator-section">
+                <h3>Kalkulator Estimasi Biaya Aqiqah</h3>
+                <div class="kalkulator-container">
+                    <div class="kalkulator-form">
+                        <div class="form-group">
+                            <label for="jumlahEkor">Jumlah Ekor Kambing</label>
+                            <input type="number" id="jumlahEkor" min="1" value="1" class="input-field">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pilihanPaket">Pilih Paket</label>
+                            <select id="pilihanPaket" class="input-field">
+                                <option value="1700000">Hemat - Rp 1.700.000/ekor</option>
+                                <option value="1900000" selected>Standar - Rp 1.900.000/ekor</option>
+                                <option value="2200000">Super - Rp 2.200.000/ekor</option>
+                                <option value="2500000">Istimewa - Rp 2.500.000/ekor</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="biayaTambahan">Biaya Tambahan (Opsional)</label>
+                            <input type="number" id="biayaTambahan" min="0" value="0" class="input-field" placeholder="Masukkan biaya tambahan">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="diskon">Diskon (Opsional)</label>
+                            <input type="number" id="diskon" min="0" value="0" class="input-field" placeholder="Masukkan jumlah diskon">
+                        </div>
+                    </div>
+
+                    <div class="kalkulator-hasil">
+                        <div class="hasil-item">
+                            <span>Total Hewan</span>
+                            <span id="totalHewan">1 ekor</span>
+                        </div>
+                        <div class="hasil-item">
+                            <span>Harga Per Ekor</span>
+                            <span id="hargaPerEkor">Rp 1.900.000</span>
+                        </div>
+                        <div class="hasil-item">
+                            <span>Subtotal</span>
+                            <span id="subtotal">Rp 1.900.000</span>
+                        </div>
+                        <div class="hasil-item">
+                            <span>Biaya Tambahan</span>
+                            <span id="biayaTambahanHasil">Rp 0</span>
+                        </div>
+                        <div class="hasil-item">
+                            <span>Diskon</span>
+                            <span id="diskonHasil">Rp 0</span>
+                        </div>
+                        <div class="hasil-item total">
+                            <span>Total Estimasi</span>
+                            <span id="totalEstimasi">Rp 1.900.000</span>
+                        </div>
+                        <button class="btn btn-primary btn-full" id="btnKonfirmasi">Konfirmasi & Hubungi</button>
+                    </div>
                 </div>
             </div>
         </div>
