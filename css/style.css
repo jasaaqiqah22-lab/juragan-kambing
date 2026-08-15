@@ -147,6 +147,16 @@ body {
     color: var(--primary-color);
 }
 
+.btn-full {
+    width: 100%;
+    margin: 0;
+}
+
+.btn-pesan {
+    width: 100%;
+    margin: 0;
+}
+
 /* Tentang Section */
 .tentang {
     padding: 80px 20px;
@@ -155,6 +165,7 @@ body {
 
 .tentang .container h2,
 .layanan .container h2,
+.harga-aqiqah .container h2,
 .galeri .container h2,
 .kontak .container h2 {
     font-size: 2.5rem;
@@ -234,6 +245,209 @@ body {
 
 .layanan-card li {
     margin-bottom: 0.5rem;
+}
+
+/* Daftar Harga Aqiqah Section */
+.harga-aqiqah {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.harga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.harga-card {
+    background: var(--white);
+    border: 2px solid #eee;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.harga-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color);
+}
+
+.harga-card.featured {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 0 0 0 8px;
+}
+
+.harga-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(210, 105, 30, 0.1) 100%);
+    border-bottom: 1px solid #eee;
+}
+
+.harga-header h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.paket-nama {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.harga-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.harga-price {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.harga-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.harga-list li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.harga-list i {
+    color: var(--accent-color);
+}
+
+/* Kalkulator Section */
+.kalkulator-section {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(210, 105, 30, 0.05) 100%);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    margin-top: 3rem;
+}
+
+.kalkulator-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.kalkulator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.kalkulator-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.kalkulator-hasil {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.hasil-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.hasil-item:last-of-type {
+    border-bottom: none;
+}
+
+.hasil-item span:first-child {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.hasil-item span:last-child {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.hasil-item.total {
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--accent-color);
+    border-bottom: none;
+    font-size: 1.3rem;
+}
+
+.hasil-item.total span:last-child {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+#btnKonfirmasi {
+    margin-top: 1.5rem;
+    width: 100%;
 }
 
 /* Galeri Section */
@@ -423,6 +637,14 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .kalkulator-container {
+        grid-template-columns: 1fr;
+    }
+
+    .harga-grid {
+        grid-template-columns: 1fr;
+    }
+
     .btn {
         margin: 5px;
         font-size: 0.9rem;
@@ -436,6 +658,7 @@ body {
 
     .tentang .container h2,
     .layanan .container h2,
+    .harga-aqiqah .container h2,
     .galeri .container h2,
     .kontak .container h2 {
         font-size: 1.8rem;
@@ -458,5 +681,18 @@ body {
     .info-item {
         margin-bottom: 1rem;
         padding-bottom: 1rem;
+    }
+
+    .harga-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kalkulator-section {
+        padding: 1.5rem;
+    }
+
+    .kalkulator-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
