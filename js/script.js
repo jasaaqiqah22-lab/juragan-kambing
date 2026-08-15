@@ -9,12 +9,15 @@ if (hamburger) {
     });
 }
 
-// Close menu when link is clicked
+// Close menu when link is clicked (only on mobile)
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
-        navMenu.style.display = 'none';
-        if (hamburger) hamburger.classList.remove('active');
+        // Hanya tutup menu jika ukuran layar mobile
+        if (window.innerWidth <= 768) {
+            navMenu.style.display = 'none';
+            if (hamburger) hamburger.classList.remove('active');
+        }
     });
 });
 
@@ -56,11 +59,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Responsive Navigation
+// Responsive Navigation - Ensure menu shows on desktop
 window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
         navMenu.style.display = 'flex';
         if (hamburger) hamburger.classList.remove('active');
+    }
+});
+
+// Initialize on page load
+window.addEventListener('load', function() {
+    if (window.innerWidth > 768) {
+        navMenu.style.display = 'flex';
     } else {
         navMenu.style.display = 'none';
     }
